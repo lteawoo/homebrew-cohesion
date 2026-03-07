@@ -1,26 +1,26 @@
 class Cohesion < Formula
   desc "Self-hosted file service for browsing and sharing files"
   homepage "https://github.com/lteawoo/Cohesion"
-  version "0.5.18"
+  version "0.5.19"
   license "AGPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lteawoo/Cohesion/releases/download/v0.5.18/cohesion_0.5.18_apple_darwin_arm64.tar.gz"
-      sha256 "407595d319dd135e26b57ecacec099dc4b46df2befe2cbc8beeff5e93f7e2a97"
+      url "https://github.com/lteawoo/Cohesion/releases/download/v0.5.19/cohesion_0.5.19_apple_darwin_arm64.tar.gz"
+      sha256 "9450f87ac612dc58c220a3afc85b5c63fdca63622acce6b16dec96ecc7dff480"
     else
-      url "https://github.com/lteawoo/Cohesion/releases/download/v0.5.18/cohesion_0.5.18_apple_darwin_amd64.tar.gz"
-      sha256 "257f4763c8246276f90d40d09ba22a28f7551e2d6c38525736a1bc34005040fc"
+      url "https://github.com/lteawoo/Cohesion/releases/download/v0.5.19/cohesion_0.5.19_apple_darwin_amd64.tar.gz"
+      sha256 "8a88777d6236c1c3f152f08e3db039e5650af92d488e78c2acbb5b40d7cae784"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/lteawoo/Cohesion/releases/download/v0.5.18/cohesion_0.5.18_linux_arm64.tar.gz"
-      sha256 "038f46732da62acc48e50b021f8c1733b604e4f70608670b5b6d886550270bff"
+      url "https://github.com/lteawoo/Cohesion/releases/download/v0.5.19/cohesion_0.5.19_linux_arm64.tar.gz"
+      sha256 "5668726c42876d1a33cccee1d0f3396f3904f034cb619fbd4a00df239ab5052d"
     else
-      url "https://github.com/lteawoo/Cohesion/releases/download/v0.5.18/cohesion_0.5.18_linux_amd64.tar.gz"
-      sha256 "b58e142a826af13d3aea92895707bc37188f0fb9a9a2127e4ec21237931210db"
+      url "https://github.com/lteawoo/Cohesion/releases/download/v0.5.19/cohesion_0.5.19_linux_amd64.tar.gz"
+      sha256 "91fe88ab4215bc18aafd7fbf5048cd885174e6ccbb01778f778188a3c454e28f"
     end
   end
 
