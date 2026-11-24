@@ -1,37 +1,28 @@
-# Homebrew Tap Bootstrap
+# Cohesion Homebrew tap
 
-This directory keeps the Cohesion Homebrew formula source before it is published to a dedicated tap repository.
-
-## Current Target
-
-- Tap repository name: `lteawoo/homebrew-tap`
-- Install command: `brew install lteawoo/tap/cohesion`
-- Update command: `brew upgrade cohesion`
-
-## Files
-
-- `Formula/cohesion.rb`: formula ready to copy into the tap repository
-
-## Refresh Formula
-
-Render the formula from the latest GitHub release metadata:
+Install Cohesion on macOS or Linux and start its background service.
 
 ```bash
-pnpm release:homebrew-formula
+brew install lteawoo/cohesion/cohesion
+brew services start cohesion
 ```
 
-Render a specific tag:
+Open `http://localhost:3000` to finish setup.
+
+## Update
 
 ```bash
-pnpm release:homebrew-formula -- --tag v0.5.17
+brew update
+brew upgrade cohesion
+brew services restart cohesion
 ```
 
-## Publish Checklist
+## Maintain the formula
 
-1. Create the `homebrew-tap` repository.
-2. Copy `Formula/cohesion.rb` into `homebrew-tap/Formula/cohesion.rb`.
-3. Add a tap README with install and service instructions.
-4. Verify:
-   - `brew install lteawoo/tap/cohesion`
-   - `brew services start cohesion`
-   - `brew upgrade cohesion`
+From a checkout of the Cohesion application, run the following command with the release tag and the path to this tap.
+
+```bash
+pnpm release:homebrew-formula --tag <release-tag> --output /path/to/homebrew-cohesion/Formula/cohesion.rb
+```
+
+Verify the macOS and Linux archive checksums against the release before merging the formula update. [Cohesion releases](https://github.com/lteawoo/Cohesion/releases)
